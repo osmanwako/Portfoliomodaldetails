@@ -426,6 +426,15 @@ body {
   background-color: #fff;
 }
 
+.errorlabel {
+  color: rgb(218, 11, 11);
+  display: none;
+}
+
+.invalidinput {
+  border: 2px solid red;
+}
+
 footer {
   position: relative;
 }
