@@ -1,21 +1,9 @@
-const { json } = require('npm-registry-fetch');
-
 const errorlabel = document.querySelector('#errorlabelid');
 const form = document.querySelector('#contactformid');
 const name = document.querySelector('#name');
 const email = document.querySelector('#email');
 const message = document.querySelector('#message');
-
-if (!localStorage.getItem('storedcontactme')) {
-  localStorage.setItem(
-    'contactmeinput',
-    JSON.stringify({ name: '', email: '', message: '' })
-  );
-}
-const storedcontactme = JSON.parse(localStorage.getItem('storedcontactme'));
-name.value = storedcontactme.name;
-email.value = storedcontactme.email;
-message.value = storedcontactme.message;
+const storedcontactme = { name: '', email: '', message: '' };
 
 function showerror() {
   email.style.border = '3px solid red';
@@ -31,6 +19,7 @@ function checkform(event) {
   event.preventDefault();
   return showerror();
 }
+
 function recordinput(event) {
   const [input, value] = [event.target.name, event.target.value];
   storedcontactme[input] = value;
