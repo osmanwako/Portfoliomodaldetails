@@ -9,8 +9,8 @@ function showerror() {
 }
 
 function checkform(event) {
-  const email = event.target.children[1].value;
-  const n = email.search(/[A-Z]+/);
+  const text = email.value;
+  const n = text.search('[A-Z]+');
   if (n < 0) return true;
   event.preventDefault();
   return showerror();
