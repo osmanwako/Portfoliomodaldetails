@@ -35,11 +35,6 @@ const projectlang = [
 
 const projdetails = [
   {
-    cid: 'btnseeprojectid btn-details',
-    name: 'See Project',
-    address: '',
-  },
-  {
     cid: 'btnseeliveid btn-details list-details',
     name: 'See Live',
     address: '',
@@ -59,9 +54,20 @@ function createlist(str, cname) {
   list.innerHTML = str;
   return list;
 }
-function createdetails() {
+function createbutton(i) {
+  const list = document.createElement('li');
+  list.className = 'no-popup';
+  const button = document.createElement('button');
+  button.className = 'btn-details txt5 fw-5 fs-17 btnseeprojectid';
+  button.value = containerid[i];
+  button.textContent = 'See Project';
+  list.appendChild(button);
+  return list;
+}
+function createdetails(i) {
   const unorderlist = document.createElement('ul');
   unorderlist.className = 'project-details';
+  unorderlist.appendChild(createbutton(i));
   projdetails.forEach((element) => {
     let text = `<a class='txt5 fw-5 fs-17 link-popup'>${element.name}</a>`;
     if (element?.path) {
@@ -80,11 +86,23 @@ function createlanguage() {
   });
   return unorderlist;
 }
+function createspan(word) {
+  word = word.repeat(2);
+  const span = document.createElement('span');
+  if (word.length < 200) {
+    span.textContent = word;
+    return span;
+  }
+  const somestr = word.substring(0, 200);
+  word = word.substring(200);
+  span.innerHTML = `${somestr}<span class='desktop-only someword'>${word}</span>`;
+  return span;
+}
 
 function createdescription(i) {
   const description = document.createElement('p');
   description.className = 'project-description';
-  description.textContent = projectdescription[i];
+  description.appendChild(createspan(projectdescription[i]));
   return description;
 }
 
@@ -133,7 +151,7 @@ function createprojectimg(i) {
 
 function createimagediv(i) {
   const imgdiv = document.createElement('div');
-  if (i % 2 == 0) imgdiv.className = 'project-img project-img1';
+  if (i % 2 === 0) imgdiv.className = 'project-img project-img1';
   else imgdiv.className = 'project-img project-img2';
   const imgcontent = createprojectimg(i);
   imgdiv.appendChild(imgcontent);
@@ -152,7 +170,7 @@ function createcontainer(i) {
   workdiv.appendChild(descontainer);
   const langcontainer = createlanguage(i);
   workdiv.appendChild(langcontainer);
-  const detailscontainer = createdetails();
+  const detailscontainer = createdetails(i);
   workdiv.appendChild(detailscontainer);
   return workdiv;
 }
@@ -170,5 +188,4 @@ function createproject(id_, i) {
 
 containerid.forEach((item, i) => {
   worksection.appendChild(createproject(item, i));
-  // createproject(item, i);
 });
