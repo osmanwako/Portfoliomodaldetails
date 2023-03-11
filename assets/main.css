@@ -235,8 +235,7 @@ body {
   margin-right: 3px;
 }
 
-.project-img,
-.project-img1 {
+.project-img {
   width: 100%;
   height: auto;
   display: flex;
@@ -244,7 +243,10 @@ body {
   float: right;
   margin-bottom: 20px;
 }
-
+.project-img > picture {
+  width: 100%;
+  height: auto;
+}
 .work-img {
   width: 100%;
 }
@@ -272,7 +274,7 @@ body {
 
 .project-details {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -282,6 +284,23 @@ body {
   border: 1px solid #396df2;
   border-radius: 12px;
   margin-left: 0;
+}
+
+.list-popup {
+  color: #6070ff;
+  padding: 12px;
+}
+
+.list-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 10px;
+  display: none;
+}
+
+.btn-details:hover .link-popup {
+  color: #fff;
 }
 
 .btn-details:hover {
@@ -488,7 +507,7 @@ footer {
     width: 100%;
   }
 
-  .project-img {
+  .project-img1 {
     width: 50%;
     float: left;
     padding-right: 30px;
@@ -498,17 +517,9 @@ footer {
     width: 100%;
   }
 
-  .project-img1 {
+  .project-img2 {
     width: 48%;
     float: right;
-  }
-
-  #work-img1 {
-    content: url('./images/desktop/workimg3.svg');
-  }
-
-  #work-img2 {
-    content: url('./images/desktop/workimg4.svg');
   }
 
   .work-project {
@@ -519,7 +530,6 @@ footer {
   .project-techn {
     width: 50%;
     float: left;
-    display: none;
   }
 
   .project-description {
