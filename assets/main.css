@@ -243,10 +243,12 @@ body {
   float: right;
   margin-bottom: 20px;
 }
+
 .project-img > picture {
   width: 100%;
   height: auto;
 }
+
 .work-img {
   width: 100%;
 }
@@ -296,7 +298,6 @@ body {
   justify-content: space-between;
   align-items: center;
   padding-right: 10px;
-  display: none;
 }
 
 .btn-details:hover .link-popup {
@@ -662,13 +663,10 @@ footer {
   }
 
   .popup-model .work-project {
-    order: -1;
-  }
-
-  .popup-model .work-project {
     width: 90%;
     order: -1;
   }
+
   .popup-model .project-techn {
     width: 90%;
     order: -1;
@@ -706,13 +704,10 @@ footer {
   }
 
   .popup-model .work-project {
-    order: -1;
-  }
-
-  .popup-model .work-project {
     width: 90%;
     order: -1;
   }
+
   .popup-model .project-techn {
     width: 90%;
     order: -1;
@@ -723,14 +718,16 @@ footer {
     float: left;
     width: 60%;
   }
+
   .popup-model .project-details {
     width: 35%;
     float: left;
     display: flex;
     justify-content: space-between;
   }
+
   .popup-model .list-details {
-    width: 35%%;
+    width: 35%;
     display: flex;
     justify-content: space-between;
   }
