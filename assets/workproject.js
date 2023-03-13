@@ -1,6 +1,6 @@
 const worksection = document.getElementById('workingprojectid');
-const minfolder = '/assets/images/mobile/';
-const maxfolder = '/assets/images/desktop/';
+const minfolder = './assets/images/mobile/';
+const maxfolder = './assets/images/desktop/';
 const containerid = ['firstdiv', 'secondiv', 'thirdiv', 'fourthdiv'];
 const projectitlename = [
   'Tonic',
@@ -61,19 +61,19 @@ function createbutton(i) {
   button.className = 'btn-details txt5 fw-5 fs-17 btnseeprojectid';
   button.value = containerid[i];
   button.textContent = 'See Project';
-  list.appendChild(button);
+  list.append(button);
   return list;
 }
 function createdetails(i) {
   const unorderlist = document.createElement('ul');
   unorderlist.className = 'project-details';
-  unorderlist.appendChild(createbutton(i));
+  unorderlist.append(createbutton(i));
   projdetails.forEach((element) => {
     let text = `<a class='txt5 fw-5 fs-17 link-popup'>${element.name}</a>`;
     if (element?.path) {
       text = `${text}<img class='txt5 fw-5 fs-17 link-popup' src='${element.path}'>`;
     }
-    unorderlist.appendChild(createlist(text, element.cid));
+    unorderlist.append(createlist(text, element.cid));
   });
   return unorderlist;
 }
@@ -82,7 +82,7 @@ function createlanguage() {
   unorderlist.className = 'project-language';
   projectlang.forEach((element) => {
     const text = `<a class='fw-5 fs-12 txt2 lang-link'>${element.name}</a>`;
-    unorderlist.appendChild(createlist(text, element.cname));
+    unorderlist.append(createlist(text, element.cname));
   });
   return unorderlist;
 }
@@ -102,7 +102,7 @@ function createspan(word) {
 function createdescription(i) {
   const description = document.createElement('p');
   description.className = 'project-description';
-  description.appendChild(createspan(projectdescription[i]));
+  description.append(createspan(projectdescription[i]));
   return description;
 }
 
@@ -115,19 +115,17 @@ function createtechnology(i) {
     createlist(dottext + technology[i].position, 'fw-6 fs-13 techn-list'),
     createlist(dottext + technology[i].year, 'fw-6 fs-13 techn-list'),
   ];
-  list.forEach((element) => unorderlist.appendChild(element));
+  list.forEach((element) => unorderlist.append(element));
   return unorderlist;
 }
 
 function createprojectitle(i) {
   const unorderlist = document.createElement('ul');
   unorderlist.setAttribute('class', 'work-project');
-  const list = [
+  return unorderlist.append(
     createlist(projectitlename[i], 'fswctitle'),
-    createlist('&#215;', 'desktop-only projectcloseicon'),
-  ];
-  list.forEach((item) => unorderlist.append(item));
-  return unorderlist;
+    createlist('&#215;', 'desktop-only projectcloseicon')
+  );
 }
 
 function getaltsource(i) {
@@ -140,12 +138,12 @@ function getaltsource(i) {
 function createprojectimg(i) {
   const picture = document.createElement('picture');
   const altsrcset = getaltsource(i);
-  picture.appendChild(altsrcset);
+  picture.append(altsrcset);
   const img = document.createElement('img');
   img.className = 'work-img';
   img.setAttribute('alt', 'project Snipping Tool');
   img.setAttribute('src', minfolder + projectimgname[i]);
-  picture.appendChild(img);
+  picture.append(img);
   return picture;
 }
 
@@ -154,24 +152,24 @@ function createimagediv(i) {
   if (i % 2 === 0) imgdiv.className = 'project-img project-img1';
   else imgdiv.className = 'project-img project-img2';
   const imgcontent = createprojectimg(i);
-  imgdiv.appendChild(imgcontent);
+  imgdiv.append(imgcontent);
   return imgdiv;
 }
 function createcontainer(i) {
   const workdiv = document.createElement('div');
   workdiv.className = 'working-container';
-  const imgcontainer = createimagediv(i);
-  workdiv.append(imgcontainer);
-  const titlecontainer = createprojectitle(i);
-  workdiv.append(titlecontainer);
-  const techncontainer = createtechnology(i);
-  workdiv.append(techncontainer);
-  const descontainer = createdescription(i);
-  workdiv.appendChild(descontainer);
-  const langcontainer = createlanguage(i);
-  workdiv.appendChild(langcontainer);
-  const detailscontainer = createdetails(i);
-  workdiv.appendChild(detailscontainer);
+  const data = [
+    createimagediv(i),
+    createprojectitle(i),
+    createtechnology(i),
+    createdescription(i),
+    createlanguage(i),
+    createdetails(i),
+  ];
+
+  data.forEach((element) => {
+    workdiv.append(element);
+  });
   return workdiv;
 }
 function createsection(id_) {
@@ -182,10 +180,10 @@ function createsection(id_) {
 }
 function createproject(id_, i) {
   const workprojectdiv = createsection(id_);
-  workprojectdiv.appendChild(createcontainer(i));
+  workprojectdiv.append(createcontainer(i));
   return workprojectdiv;
 }
 
 containerid.forEach((item, i) => {
-  worksection.appendChild(createproject(item, i));
+  worksection.append(createproject(item, i));
 });
