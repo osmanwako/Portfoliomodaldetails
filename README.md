@@ -97,6 +97,11 @@ Install this project with:
 
 - GitHub: [@Osmanwako](https://github.com/osmanwako)
 - LinkedIn: [Osmanwako](https://www.linkedin.com/in/osman-wako-08663825a/)
+
+👤 **Author1**
+
+- GitHub: [@Benson](https://www.linkedin.com/in/benson-njuguna-008146242/)
+- LinkedIn: [Benson](https://www.linkedin.com/in/osman-wako-08663825a/)
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
