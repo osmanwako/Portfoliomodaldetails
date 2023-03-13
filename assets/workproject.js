@@ -121,11 +121,10 @@ function createtechnology(i) {
 
 function createprojectitle(i) {
   const unorderlist = document.createElement('ul');
-  unorderlist.setAttribute('class', 'work-project');
-  return unorderlist.append(
-    createlist(projectitlename[i], 'fswctitle'),
-    createlist('&#215;', 'desktop-only projectcloseicon')
-  );
+  unorderlist.className = 'work-project';
+  unorderlist.append(createlist(projectitlename[i], 'fswctitle'));
+  unorderlist.append(createlist('&#215;', 'desktop-only projectcloseicon'));
+  return unorderlist;
 }
 
 function getaltsource(i) {
