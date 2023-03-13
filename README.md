@@ -101,7 +101,7 @@ Install this project with:
 👤 **Author1**
 
 - GitHub: [@Benson](https://www.linkedin.com/in/benson-njuguna-008146242/)
-- LinkedIn: [Benson](https://www.linkedin.com/in/osman-wako-08663825a/)
+- LinkedIn: [Benson](https://www.linkedin.com/in/benson-njuguna-008146242/)
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
