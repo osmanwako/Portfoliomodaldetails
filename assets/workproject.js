@@ -1,4 +1,3 @@
-const { createElement } = require('parse5/lib/tree-adapters/default');
 
 const worksection = document.getElementById('workingprojectid');
 
