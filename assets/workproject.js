@@ -171,12 +171,14 @@ function createcontainer(i) {
   });
   return workdiv;
 }
+
 function createsection(id_) {
   const containerdiv = document.createElement('div');
   containerdiv.className = 'section-workproject bg-white';
   containerdiv.id = id_;
   return containerdiv;
 }
+
 function createproject(id_, i) {
   const workprojectdiv = createsection(id_);
   workprojectdiv.append(createcontainer(i));
