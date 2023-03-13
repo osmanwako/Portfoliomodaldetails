@@ -22,7 +22,7 @@ const technology = [
 ];
 const projectdescription = [
   'Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quo fuga quisquam si porro officiis cumque totam ipsum similique.Quasi dignissimos voluptas ex nostrum solutarepudiandae suscipit delectus aliquid labore?',
-  'Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quo fuga quisquam si porro officiis cumque totam ipsum similique.Quasi dignissimos voluptas ex nostrum solutarepudiandae suscipit delectus aliquid labore?',
+  'Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quo fuga quisquam si porro officiis cumque totam ipsum similique.Quasi dignissimos voluptas voluptas ex nostrum solutarepudiandae suscipit delectus aliquid labore?',
   'Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quo fuga quisquam si porro officiis cumque totam ipsum similique.Quasi dignissimos voluptas ex nostrum solutarepudiandae suscipit delectus aliquid labore?',
   'Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quo fuga quisquam si porro officiis cumque totam ipsum similique.Quasi dignissimos voluptas ex nostrum solutarepudiandae suscipit delectus aliquid labore?',
 ];
