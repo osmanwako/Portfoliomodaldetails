@@ -3,7 +3,13 @@ const form = document.querySelector('#contactformid');
 const name = document.querySelector('#name');
 const email = document.querySelector('#email');
 const message = document.querySelector('#message');
-const storedcontactme = { name: '', email: '', message: '' };
+let storedcontactme = { name: '', email: '', message: '' };
+
+if (localStorage.getItem('storedcontactme')) {
+  storedcontactme = JSON.parse(localStorage.getItem('storedcontactme'));
+} else {
+  localStorage.setItem('storedcontactme', JSON.stringify(storedcontactme));
+}
 
 function showerror() {
   email.style.border = '3px solid red';
