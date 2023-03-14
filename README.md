@@ -32,7 +32,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Desktop Portfolio <a name="about-project"></a>
+# 📖 My Portfolio <a name="about-project"></a>
 
 This is my first mobile version port folio microverse project
 
@@ -89,6 +89,7 @@ Install this project with:
 ### Run tests
 
 ### Deployment
+
 <!-- AUTHORS -->
 
 ## 👥 Authors <a name="authors"></a>
@@ -97,35 +98,48 @@ Install this project with:
 
 - GitHub: [@Osmanwako](https://github.com/osmanwako)
 - LinkedIn: [Osmanwako](https://www.linkedin.com/in/osman-wako-08663825a/)
+
+👤 **Collaborator**
+
+- GitHub: [@bennyjoez](https://github.com/bennyjoez)
+- Twitter: [@bennyjoezz](https://twitter.com/bennyjoezz)
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[Mobile version]**
-- [ ] **[Desktop Version]**
+- Mobile version
+- Desktop Version
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
 
 ## 🤝 Contributing <a name="contributing"></a>
+
+- Contributions, issues, and feature requests are welcome!
+
+- Feel free to check the issues page.
+
 <!-- SUPPORT -->
 
 ## ⭐️ Show your support <a name="support"></a>
-If you are interesting to this port folio please 
+
+If you are interesting to this port folio please
+
 - join microverse
-- Read w3chool website html 
+- Read w3chool website html
 - Read CSS tutorials
 
 <!-- ACKNOWLEDGEMENTS -->
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank Microverse Staff and Partiner.
+I would like to thank Microverse Community and student Code partiner,Morning Session and standup all .
 
 <!-- LICENSE -->
 
 ## 📝 License <a name="license"></a>
+
 This project is [MIT](./MIT.md) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
