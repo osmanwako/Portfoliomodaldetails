@@ -724,7 +724,7 @@ footer {
   }
 
   .popup-model .working-container {
-    width: 992px;
+    max-width: 992px;
     display: grid;
     grid-template-areas:
       'title title'
