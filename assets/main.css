@@ -611,8 +611,15 @@ footer {
 
 .body-blur {
   position: fixed;
+  background-image: url('/assets/images/mobile/introductionbg.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  filter: blur(10px);
   top: 0;
   left: 0;
+  right: 0;
+  bottom: 0;
   z-index: 99;
   width: 100vw;
   height: 100vh;
@@ -644,6 +651,8 @@ footer {
     position: fixed;
     top: 0;
     left: 0;
+    bottom: 0;
+    right: 0;
     margin-left: 10px;
     margin-right: 10px;
     z-index: 100;
@@ -697,6 +706,12 @@ footer {
 }
 
 @media (min-width: 768px) {
+  .body-blur {
+    background-image: url('./images/desktop/introductionbg.svg');
+    background-position: center;
+    background-size: 90% 90%;
+  }
+
   .popup-model {
     position: fixed;
     top: 0;
